@@ -30,11 +30,8 @@ This project implements a Node.js API for accessing the microphone and managing 
     ```
 
 2. Use the following API endpoints to control the camera and call recording:
-
-    - `POST /startCameraRecording`: Start microphone recording.
-    - `POST /stopCameraRecording`: Stop microphone recording.
-    - `POST /startCallRecording`: Start call recording.
-    - `POST /stopCallRecording`: Stop call recording.
+    - `POST /callRecordingStart`: Start call recording.
+    - `POST /callRecordingStop`: Stop call recording.
 
 ## Contributing
 

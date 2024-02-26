@@ -14,14 +14,8 @@ This project implements a Node.js API for accessing the microphone and managing 
     ```bash
     git clone https://github.com/bibek1123/Android-management-tool.git
     ```
-
-2. Navigate to the project directory:
-
-    ```bash
-    cd api
-    ```
-
-3. Install dependencies:
+    
+2. Install dependencies:
 
     ```bash
     npm install

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microphone Recorder</title>
+</head>
+<body>
+    <h1>Microphone Recorder</h1>
+    <button id="startButton">Start Recording</button>
+    <button id="stopButton">Stop Recording</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+   <script>
+    const socket = io();
+
+    document.getElementById('startButton').addEventListener('click', () => {
+        socket.emit('startRecording');
+    });
+
+    document.getElementById('stopButton').addEventListener('click', () => {
+        socket.emit('stopRecording');
+    });
+
+    // Listen for recording error events
+    socket.on('recordingError', (error) => {
+        alert(error.message);
+    });
+</script>
+</body>
+</html>
